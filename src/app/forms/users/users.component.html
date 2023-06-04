@@ -1,0 +1,69 @@
+<div class="page-header">
+    <h3 class="page-title">
+        <i  class="mdi mdi-account-multiple-outline"></i> les utilisateurs
+    </h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:;">Tables</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><button routerLinkActive  type="button" class="btn btn-gradient-info btn-rounded btn-fw"   routerLink="creeruser">Ajouter</button></li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="col-lg-10 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Etablissement</th>
+                <th>Labo</th>
+                <th>Email</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let membre of membres">
+                <td class="py-1">{{ membre.nom }}</td>
+                <td>{{ membre.etab }}</td>
+                <td>{{ membre.labo }}</td>
+                <td>{{ membre.email }}</td>
+                <td>{{ membre.role }}</td>
+                <td>
+                  <button type="button" class="btn btn-gradient-success"   (click)="ouvrirPopupModifier(membre)">modifier</button>
+
+                  <div class="popup" *ngIf="membreSelectionne">
+                    <div class="popup-contenu">
+                      <!-- Champs d'entrée pour modifier les propriétés du membre -->
+                      <input type="text" [(ngModel)]="membreSelectionne.nom">
+                      <input type="text" [(ngModel)]="membreSelectionne.etab">
+                      <input type="text" [(ngModel)]="membreSelectionne.labo">
+                      <input type="text" [(ngModel)]="membreSelectionne.email">
+                      <input type="text" [(ngModel)]="membreSelectionne.role">
+                  
+                      <!-- Bouton pour sauvegarder les modifications -->
+                      <button type="button" class="btn btn-gradient-success" (click)="enregistrerModifications()">Enregistrer</button>
+                      <button type="button" class="btn btn-gradient-danger" (click)="annulerModifications()">Annuler</button>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+                  <button type="button" class="btn btn-gradient-danger"  (click)="supprimerMembre(membre.id)">supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

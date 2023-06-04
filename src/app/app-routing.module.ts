@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-
+import { SidebarAdminComponent } from './shared/sidebar-admin/sidebar-admin.component';
+import { DemandesComponent } from './forms/demandes/demandes.component';
+import { UsersComponent } from './forms/users/users.component';
+import { EtablissementComponent } from './forms/etablissement/etablissement.component';
+import { CreeruserComponent } from './forms/creeruser/creeruser.component';
+import { CreerlaboComponent } from './forms/creerlabo/creerlabo.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
@@ -14,7 +18,12 @@ const routes: Routes = [
   { path: 'general-pages', loadChildren: () => import('./general-pages/general-pages.module').then(m => m.GeneralPagesModule) },
   { path: 'apps', loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule) },
   { path: 'user-pages', loadChildren: () => import('./user-pages/user-pages.module').then(m => m.UserPagesModule) },
-  { path: 'error-pages', loadChildren: () => import('./error-pages/error-pages.module').then(m => m.ErrorPagesModule) },
+  { path: 'After', loadChildren: () => import('./error-pages/error-pages.module').then(m => m.ErrorPagesModule) },
+  { path: 'demandes', component: DemandesComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'etablessement', component: EtablissementComponent },
+  { path: 'creerlabo', component: CreerlaboComponent },
+  { path: 'creeruser', component: CreeruserComponent },
 ];
 
 @NgModule({
