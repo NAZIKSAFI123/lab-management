@@ -30,6 +30,12 @@ export class MembreService {
     return this.http.delete<void>(url);
   }
 
+  
+  modifierMembre(membre: Membre): Observable<Membre> {
+    const url = `${this.baseUrl}/membres`;
+    return this.http.put<Membre>(url, membre);
+  }
+
   getAllMembres(): Observable<Membre[]> {
     const url = `${this.baseUrl}/membres`;
     return this.http.get<Membre[]>(url);

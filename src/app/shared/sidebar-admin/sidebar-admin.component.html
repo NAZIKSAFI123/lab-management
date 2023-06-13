@@ -2,12 +2,10 @@
     <ul class="nav">
       <li class="nav-item nav-profile">
         <a href="javascript:;" class="nav-link">
-          <div class="nav-profile-image">
-            <img src="assets/images/faces/face1.jpg" alt="profile">
-            <span class="login-status online"></span> <!--change to offline or busy as needed-->              
-          </div>
+                      
+         
           <div class="nav-profile-text">
-            <span class="font-weight-bold mb-2">Mr.admin</span>
+            <span class="font-weight-bold mb-2">Nazik Es-safi</span>
             <span class="text-secondary text-small">administrateur</span>
           </div>
           <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
@@ -16,13 +14,15 @@
       <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
         <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive">
           <span class="menu-title">Profile</span>
-          <i class="mdi mdi-home menu-icon"></i>
+          <i class="mdi mdi-account-check menu-icon"></i>
         </a>
       </li>
       <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
         <a class="nav-link" routerLink="demandes" routerLinkActive #forms="routerLinkActive">
           <span class="menu-title">Demandes</span>
-          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          
+          <i class="mdi mdi-account-multiple-plus menu-icon"></i>
+        
         </a>
       </li>
          
@@ -30,13 +30,14 @@
       <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
         <a class="nav-link" routerLink="etablessement" routerLinkActive #forms="routerLinkActive">
           <span class="menu-title">les établissements</span>
-          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <i class="mdi mdi-auto-fix menu-icon"></i> 
         </a>
       </li>
       <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
         <a class="nav-link" routerLink="users" routerLinkActive #forms="routerLinkActive">
           <span class="menu-title">les uilisateurs</span>
-          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <i class="mdi mdi-account-multiple-outline menu-icon"></i>
+          
         </a>
       </li>
 
@@ -44,7 +45,8 @@
       <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
         <a class="nav-link" routerLink="creerlabo" routerLinkActive #forms="routerLinkActive">
           <span class="menu-title">Créer un laboratoire</span>
-          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <i class="mdi mdi-border-color menu-icon"></i>
+         
         </a>
       </li>
 

@@ -19,12 +19,15 @@ import { ContentAnimateDirective } from './shared/directives/content-animate.dir
 import { TodoListComponent } from './apps/todo-list/todo-list.component';
 import { CommonModule } from '@angular/common';
 import { UsersComponent } from './forms/users/users.component'; 
+import { SidebarMembreComponent } from './shared/sidebar-membre/sidebar-membre.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SidebarComponent,
     SidebarAdminComponent,
+    SidebarMembreComponent,
     FooterComponent,
     DashboardComponent,
     TodoListComponent,
@@ -43,6 +46,7 @@ import { UsersComponent } from './forms/users/users.component';
     ChartsModule,
     HttpClientModule,
     CommonModule
+    
   ],
   providers: [ThemeService],
   bootstrap: [AppComponent]

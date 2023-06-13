@@ -7,6 +7,8 @@ import { UsersComponent } from './forms/users/users.component';
 import { EtablissementComponent } from './forms/etablissement/etablissement.component';
 import { CreeruserComponent } from './forms/creeruser/creeruser.component';
 import { CreerlaboComponent } from './forms/creerlabo/creerlabo.component';
+import { BudgetComponent } from './forms/budget/budget.component';
+import { ExpressionBComponent } from './forms/expression-b/expression-b.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
@@ -24,6 +26,9 @@ const routes: Routes = [
   { path: 'etablessement', component: EtablissementComponent },
   { path: 'creerlabo', component: CreerlaboComponent },
   { path: 'creeruser', component: CreeruserComponent },
+  { path: 'budget', component: BudgetComponent },
+  { path: 'expressionB', component: ExpressionBComponent },
+
 ];
 
 @NgModule({

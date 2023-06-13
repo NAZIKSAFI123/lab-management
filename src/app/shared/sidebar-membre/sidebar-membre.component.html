@@ -1,1 +1,64 @@
-<p>sidebar-membre works!</p>
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item nav-profile">
+        <a href="javascript:;" class="nav-link">
+                      
+         
+          <div class="nav-profile-text">
+            <span class="font-weight-bold mb-2">Mustapha El-Jammaay</span>
+            <span class="text-secondary text-small">Membre ISI</span>
+          </div>
+          <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+        </a>
+      </li>
+      <li class="nav-item mx-3" [ngClass]="{ 'active': dashboard.isActive }">
+        <a class="nav-link" routerLink="/budget" routerLinkActive #dashboard="routerLinkActive">
+          <span class="menu-title">Budget</span>
+          <i class="mdi mdi-account-check menu-icon"></i>
+        </a>
+      </li>
+      <li class="nav-item mx-3" [ngClass]="{ 'active': forms.isActive }">
+        <a class="nav-link" routerLink="expressionB" routerLinkActive #forms="routerLinkActive">
+          <span class="menu-title">Expression de besoin </span>
+          
+          <i class="mdi mdi-account-multiple-plus menu-icon"></i>
+        
+        </a>
+      </li>
+         
+       
+      
+      
+
+
+     
+
+
+
+      <!--<li class="nav-item" [ngClass]="{ 'active': charts.isActive }">
+        <a class="nav-link" routerLink="charts/chartjs" routerLinkActive #charts="routerLinkActive">
+          <span class="menu-title">Charts</span>
+          <i class="mdi mdi-chart-bar menu-icon"></i>
+        </a>
+      </li>
+      <li class="nav-item" [ngClass]="{ 'active': tables.isActive }">
+        <a class="nav-link" routerLink="tables/basic-table" routerLinkActive #tables="routerLinkActive">
+          <span class="menu-title">Tables</span>
+          <i class="mdi mdi-table-large menu-icon"></i>
+        </a>
+      </li>
+      <li class="nav-item" [ngClass]="{ 'active': icons.isActive }">
+        <a class="nav-link" routerLink="icons/mdi" routerLinkActive #icons="routerLinkActive">
+          <span class="menu-title">Icons</span>
+          <i class="mdi mdi-contacts menu-icon"></i>
+        </a>
+      </li>
+      <li class="nav-item" [ngClass]="{ 'active': icons.isActive }">
+        <a class="nav-link" routerLink="icons/mdi" routerLinkActive #icons="routerLinkActive">
+          <span class="menu-title">Icons</span>
+          <i class="mdi mdi-contacts menu-icon"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>-->
+  
